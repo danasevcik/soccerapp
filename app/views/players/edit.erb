@@ -1,0 +1,19 @@
+<h1>EDIT THIS PLAYER</h1>
+<%= form_for @player do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :number %>
+  <%= f.number_field :number %>
+  <br>
+  <%= f.label :dedication %>
+  <%= f.text_field :dedication %>
+  <br>
+  <%= f.label :decent %>
+  <%= f.select :decent, [true, false] %>
+  <br>
+  <%= f.label :team %>
+  <%= f.collection_select(:team_id, Team.all, :id, :name) %>
+  <br>
+  <%= f.submit %>
+<% end %>

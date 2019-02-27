@@ -1,0 +1,8 @@
+<!-- show a single player
+name and team that they belong to  -->
+
+<h1>THIS PLAYER💪⚽️</h1>
+<h2>PLAYER NAME</h2>
+<%= @player.name %>
+<h2>TEAM</h2>
+<%= link_to @player.team.name, team_path(@player.team) %>

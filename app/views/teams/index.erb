@@ -1,0 +1,12 @@
+<!-- show all soccer teams
+each team is a link, brings you to that team's show page
+button to delete a single team  -->
+
+<h1>⚽️ SOCCER TEAMS ⚽️</h1>
+<% @teams.each do |team| %>
+  <h2>TEAM NAME</h2>
+  <%= link_to team.name, team_path(team) %>
+  <h2>CITY</h2>
+  <%= team.city %>
+  <%= button_to "delete", @team, :method => :destroy %>
+<% end %>

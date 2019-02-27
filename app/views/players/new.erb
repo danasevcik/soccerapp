@@ -1,0 +1,32 @@
+<!-- form to create a new player
+text for name, number and dedication
+true false drop down for decent
+drop down with team names
+submit -->
+
+<h1>⚽️ ADD A SOCCER PLAYER ⚽️</h1>
+
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <%= error %>
+  <% end %>
+<% end %>
+
+<%= form_for @player do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :number %>
+  <%= f.number_field :number %>
+  <br>
+  <%= f.label :dedication %>
+  <%= f.text_field :dedication %>
+  <br>
+  <%= f.label :decent %>
+  <%= f.select :decent, [true, false] %>
+  <br>
+  <%= f.label :team %>
+  <%= f.collection_select(:team_id, Team.all, :id, :name) %>
+  <br>
+  <%= f.submit %>
+<% end %>

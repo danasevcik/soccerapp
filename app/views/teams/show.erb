@@ -1,0 +1,14 @@
+<h1>THIS TEAM💪⚽️</h1>
+<h2>TEAM NAME</h2>
+<%= @team.name %>
+<h2>TEAM PLAYERS</h2>
+<% @players.each do |player| %>
+  <h5>NAME:</h5>
+  <%= player.name %>
+  <h5>NUMBER💯</h5>
+  <%= player.number %>
+  <h5>DEDICATION LEVEL</h5>
+  <%= player.dedication %>
+  <h5>DECENT?🤷‍</h5>
+  <%= player.decent %>
+<% end %>

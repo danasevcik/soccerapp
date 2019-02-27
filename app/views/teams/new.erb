@@ -1,0 +1,10 @@
+<h1>MAKE A NEW TEAM⚽️</h1>
+<%= form_for @team do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+  <br>
+  <%= f.submit %>
+<% end %>
